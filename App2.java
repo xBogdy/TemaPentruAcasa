@@ -1,4 +1,4 @@
-package com.company2;
+package com.company;
 
 import java.util.Scanner;
 

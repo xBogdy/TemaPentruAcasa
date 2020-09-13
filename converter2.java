@@ -1,4 +1,4 @@
-package com.company2;
+package com.company;
 
 public class converter2 {
     public static class TempConverter{
