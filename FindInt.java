@@ -2,22 +2,29 @@ package com.arrays;
 
 import java.util.Scanner;
 
-public class FindInt {
-    public static void main(String[] args) {
-        int z = 0;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduceti numarul de cifre");
-        int l = scanner.nextInt();
-        int[] x = new int[l];
-
-        for (int i = 0,j=0; i < x.length; i++,j++) {
-            System.out.println("introduceti nr["+i+"]");
-            x[i] = scanner.nextInt();
-
-        }
-        for(int i=0;i<x.length;i++)
+public class FindInt     {
+    public static void voc(char ch){
+        if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='Ș'||ch=='ș'||ch=='ă'||ch=='ț'||ch=='î'||ch=='â'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U')
         {
-            System.out.println("Nr["+ l-- +"] = "+ x[l]);
+            System.out.println(ch+" = Vocala");
         }
+        else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z'))
+            System.out.println(ch+" = Consoana");
+    }
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        char[] x = new char[10];
+        System.out.println("introduceti cuv(max 10 caractere)");
+        String p = scanner.next();
+        System.out.println("nr caractere :"+p.length());
+
+        for (int i = 0; i < p.length(); i++) {
+
+            x[i] = p.charAt(i);
+            voc(x[i]);
+        }
+
     }
 }
